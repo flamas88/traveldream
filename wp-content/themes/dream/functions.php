@@ -18,3 +18,7 @@ function register_my_menus(){
 }
 //Au démarrage (init), WP appelle la fonction "register_my_menus"
 add_action('init', 'register_my_menus');
+
+//gestion des images à la une
+add_theme_support('post-thumbnails');
+

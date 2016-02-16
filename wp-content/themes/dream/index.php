@@ -9,6 +9,9 @@
         <p>Article écrit par <?php the_author(); ?> en date de <?php the_date(''); ?></p>
         <a href="<?php the_permalink(); ?>" class="more">Lire la suite</a>
         <p><?php comments_popup_link('Aucun commentaire', '1 commentaire', '% commentaires'); ?></p>
+        <?php if(has_post_thumbnail()) { ?>
+               <p><?php the_post_thumbnail('thumbnail'); ?></p>
+        <?php } ?>
     </article>
        <?php endwhile; ?>
     </section>
